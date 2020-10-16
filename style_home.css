@@ -1,0 +1,829 @@
+/*
+STYLESHEET FOR CORE CONSULTING CORPORATE PORTAL
+Author: Tan Eijyne
+Version: 1.0
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+1.0 General Body
+	1.1 Containers
+	1.2 Carousel
+2.0 Navigation Bar
+3.0 Performance Revolution Section
+4.0 Partners Section
+5.0 Products & Services Section
+6.0 Customers Section
+7.0 Footer
+8.0 Custom Media Queries
+	8.1 MQ: 480px
+	8.2 MQ: 768px
+	8.3 MQ: 900px
+	8.4 MQ: 990px
+	8.5 MQ: 1300px
+9.0 Contact Page
+10.0 Why Us (About) Page
+11.0 Performance Revolution Page
+12.0 Product & Services Page
+13.0 Career Page
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+1.0 General Body
+--------------------------------------------------------------*/
+body {
+	padding-top: 50px;
+	font: 400 15px Lato, sans-serif;
+    line-height: 1.8;
+    color: #818181;
+	background-color: #2C3134;
+}
+h1 {
+	color: white;
+}
+h2 {
+	font-size: 24px;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+p {
+	color: white;
+	font-size:16px;
+}
+.jumbotron {
+    background-color: transparent;
+    color: black;
+    padding-top: 10%;
+	padding-left: 0px;
+    font-family: Montserrat, sans-serif;
+}
+.bg-grey {
+    background-color: #383D41;
+}
+.bg-light-grey {
+	background-color: #fff;
+}
+.slideanim {visibility:hidden;}
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    visibility: visible;
+}
+@keyframes slide {
+    0% {
+		opacity: 0;
+		transform: translateY(70%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+}
+@-webkit-keyframes slide {
+    0% {
+		opacity: 0;
+		-webkit-transform: translateY(70%);
+    }
+    100% {
+		opacity: 1;
+		-webkit-transform: translateY(0%);
+    }
+}
+/* 5 columns */
+.col-xs-5ths,
+.col-sm-5ths,
+.col-md-5ths,
+.col-lg-5ths {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.col-xs-5ths {
+    width: 20%;
+    float: left;
+}
+@media (min-width: 768px) {
+    .col-sm-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-5ths {
+        width: 20%;
+        float: left;
+    }
+}
+/*--------------------------------------------------------------
+1.1 Containers
+--------------------------------------------------------------*/
+.container-fluid {
+    padding: 60px 100px;
+}
+.container-nav {
+    padding: 10px 100px 0px;
+}
+.container-mid {
+    padding: 15px 100px 0px 100px;
+}
+.container-fluid-mid {
+	height: 587px !important;
+	background-image: url("./includes/rev.jpg");
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+	-webkit-transition: all 0.3s ease-in !important;
+	transition: all 0.3s ease-in !important;
+}
+.container-perfrev {
+	padding: 15px 100px 0px 100px;
+}
+
+/*--------------------------------------------------------------
+1.2 Carousel
+--------------------------------------------------------------*/
+.item h4 {
+    font-size: 19px;
+    line-height: 1.375em;
+    font-weight: 400;
+    font-style: italic;
+    margin: 70px 0;
+}
+.item span {
+	font-style: normal;
+}
+.carousel-control.right, .carousel-control.left {
+    background-image: none;
+    color: #02C4E8;
+}
+.carousel-indicators li {
+	margin-top: 50px;
+	width: 40px;
+	height: 5px;
+	background-color: #fff;
+	border: none;
+}
+.carousel-indicators li.active {
+    background-color: #02C4E8;
+	width: 40px;
+	height: 5px;
+}
+.carousel-content {
+	padding-right: 20px;
+	position: absolute;
+	top: 20%;
+	left: 5%;
+	z-index: 20;
+	color: white;
+	text-shadow: 5px 5px 10px rgba(0,0,0,1);
+}
+.btn {
+	margin-top: 20px;
+	color:white;
+	background: none;
+	border: 1px solid white;
+	border-radius: 0%;
+}
+.btn:hover {
+	color:black;
+	background: white;
+	border: 1px solid white;
+	border-radius: 0%;
+}
+.container-fluid-top img{
+	width: 100%;
+}
+/*--------------------------------------------------------------
+2.0 Navigation Bar
+--------------------------------------------------------------*/
+.navbar-brand {
+  padding: 0px;
+}
+.navbar-brand>img {
+  height: 100%;
+  width: 80%;
+  margin-top: 12px;
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.navbar {
+    margin-bottom: 0;
+    background-color: #2C3134;
+	opacity: 0.985;
+    top:0px;
+	position: fixed;
+    border: 0;
+    font-size: 16px !important;
+    line-height: 1.42857143 !important;
+    border-radius: 0;
+    font-family: Montserrat, sans-serif;
+}
+ .navbar-nav li.active a {
+	color: #02C4E8 !important;
+	background: #2C3134 !important;
+	-webkit-transition: all 0.2s ease !important;
+	transition: all 0.2s ease !important;
+}
+.navbar li a, .navbar .navbar-brand {
+    color: #fff !important;
+	padding-bottom: 25px;
+	background-color:  #2C3134 !important;
+}
+.navbar-nav li.active {
+	color: #02C4E8 !important;
+	background: #2C3134;
+	background-color:#f4511e !important;
+}
+.navbar-nav li a:hover {
+    color: #02C4E8 !important;
+	box-shadow: inset 0 -3.5px 0 0 #02C4E8;
+	background-color: #2C3134 !important;
+	-webkit-transition: all 0.2s ease !important;
+	transition: all 0.2s ease !important;
+}
+.navbar-nav li a:hover .dropdown {
+	background-color: #2C3134 !important;
+	color: #02C4E8 !important;
+}
+.navbar-fixed-top .active {
+	color: #02C4E8 !important;
+}
+.navbar-default .navbar-toggle {
+    border-color: #2C3134 !important;
+    color: #02C4E8 !important;
+}
+.dropdown-menu {
+	background-color: #2C3134;
+	padding: 0px;
+}
+.dropdown-menu li a {
+	padding-top: 20px;
+	background-color: #2C3134;
+}
+.dropdown-menu li a:hover {
+	color: #02C4E8 !important;
+	box-shadow: inset 3.5px 0 0 0 #02C4E8;
+	background-color: #2C3134;
+}
+.dropdown a:active {
+	background-color: #2C3134;
+}
+.dropdown:hover .dropdown-toggle {
+	background-color: #2C3134 !important;
+	color: #02C4E8 !important;
+}
+/*--------------------------------------------------------------
+3.0 Performance Revolution Section
+--------------------------------------------------------------*/
+.gi-2x{font-size: 1.8em;}
+.gi-3x{font-size: 3em;}
+.gi-4x{font-size: 4em;}
+.gi-5x{font-size: 5em;}
+.perfrev {
+	transition: all 0.2s ease-in;
+	color: #fff;
+}
+.perfrev-content {
+	padding-left: 70px;
+}
+.nav-stacked {
+	background-color: rgba(255, 255, 255, 0.2);
+}
+.nav-stacked li a{
+	padding: 18px 0 18px 0;
+	color: white;
+	border-radius: 0%;
+	font-size: 20px;
+}
+.nav-stacked li a:hover{
+	background-color: transparent;
+}
+.nav-stacked .navpanel {
+	position: absolute;
+	left: 2.5%;
+	width: 95%;
+	height: 25%;
+	background-color: #02C4E8;
+	padding: 10px 30px 10px 30px;
+	top: 0%;
+	-webkit-transition: top 0.3s; /* For Safari 3.1 to 6.0 */
+	transition: top 0.3s;
+	transition-timing-function: ease;
+}
+#carouselPerf .item img {
+	width:100%;
+	height: 450px;
+}
+.carousel-content-header p {
+	font-size: 20px;
+}
+/*--------------------------------------------------------------
+4.0 Partners Section
+--------------------------------------------------------------*/
+.partner {
+	padding: 0px 20px 0px 10px;
+}
+.container-fluid-partner {
+	padding: 10px 50px 20px 50px;
+}
+.container-fluid-partnernew {
+	padding: 10px 50px 10px 50px;
+}
+.container-fluid-partnernew h2 {
+	color: black;
+}
+.container-fluid-partner h2 {
+	color: black;
+}
+.partlogo img {
+	width: 100%;
+	overflow: hidden;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+}
+.partlogo:hover img {
+	-moz-transform: scale(1.2);
+	-webkit-transform: scale(1.2);
+	transform: scale(1.2);
+}
+/*--------------------------------------------------------------
+5.0 Products & Services Section
+--------------------------------------------------------------*/
+.thumbnail {
+    padding: 0 0 0 0;
+    border: none;
+    border-radius: 0;
+}
+.panel {
+    border-radius:0 !important;
+	width: 100%;
+    transition: box-shadow 0.5s;
+	border:none;
+}
+#panel h3 {
+    font-size: 22px;
+	color: white;
+}
+#panelout {
+	position: relative;
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+}
+.panel-content {
+	padding: 50px 10px 30px 10px;
+	position: absolute;
+	top: 0%;
+	color: white;
+	text-shadow: 0 1px 2px rgba(0,0,0,.6);
+	background-color: rgba(0,0,0,.5);
+}
+.paneline {
+	border-top: 3px solid white;
+}
+.panelout {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+	overflow: hidden;
+}
+.panelout .panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background: rgba(0,0,0,.7);
+	padding: 10px 30px 10px 30px;
+	top: 70%;
+	-webkit-transition: top 0.7s; /* For Safari 3.1 to 6.0 */
+	transition: top 0.7s;
+	transition-timing-function: ease;
+}
+.panelout .panel:hover, .panelout .panel:active, .panelout .panel:focus{
+	top: 0%;
+}
+/*--------------------------------------------------------------
+6.0 Customers Section
+--------------------------------------------------------------*/
+.customer h2 {
+	color: white;
+}
+/*--------------------------------------------------------------
+7.0 Footer
+--------------------------------------------------------------*/
+.logo-button-footer button:hover {
+	cursor: pointer;
+	background: transparent;
+}
+.footerlarge img {
+	width: 100%;
+}
+.footerlarge a {
+	color: 	#A2B1B0;
+	cursor: pointer; cursor: hand;
+}
+.footerlarge a:hover {
+	color: 	#02C4E8;
+	cursor: pointer; cursor: hand;
+	text-decoration: none;
+}
+.footerlargeinner {
+	padding-left: 10%;
+}
+.footersmall img {
+	width: 50%;
+}
+.footersmall button {
+	color: white;
+	border-bottom: 0.5px solid #fff;
+}
+.footersmall button:hover {
+	background: transparent !important;
+	color: white !important;
+}
+.footerinner {
+	background-color: #383D41;
+	color: white;
+}
+.footerinner a:hover {
+	color: 	#02C4E8 !important;
+	cursor: pointer !important; cursor: hand !important;
+	text-decoration: none !important;
+	background-color: transparent !important;
+}
+.footer-copyright {
+	padding-top:0px;
+	padding-bottom: 20px;
+}
+/*--------------------------------------------------------------
+8.0 Custom Media Queries
+--------------------------------------------------------------*/
+.col-xs-15,
+.col-sm-15,
+.col-md-15,
+.col-lg-15 {
+    position: relative !important;
+    min-height: 1px !important;
+    padding-right: 10px !important;
+    padding-left: 10px !important;
+}
+
+.col-xs-15 {
+    width: 20% !important;
+    float: left !important;
+}
+@media (min-width: 768px) {
+.col-sm-15 {
+        width: 20% !important;
+        float: left !important;
+    }
+}
+@media (min-width: 992px) {
+    .col-md-15 {
+        width: 20% !important;
+        float: left !important;
+    }
+}
+@media (min-width: 1200px) {
+    .col-lg-15 {
+        width: 20% !important;
+        float: left !important;
+    }
+}
+/*--------------------------------------------------------------
+8.1 MQ: 480px
+--------------------------------------------------------------*/
+@media screen and (max-width: 480px) {
+    .logo {
+        font-size: 150px;
+    }
+	.navbar-brand {
+		width: 85%;
+	}
+}
+/*--------------------------------------------------------------
+8.2 MQ: 768px
+--------------------------------------------------------------*/
+@media screen and (max-width: 768px) {
+    .col-sm-4 {
+      text-align: center;
+      margin: 25px 0;
+    }
+    .btn-lg {
+        width: 100%;
+        margin-bottom: 35px;
+    }
+}
+/*--------------------------------------------------------------
+8.3 MQ: 900px
+--------------------------------------------------------------*/
+@media screen and (max-width: 900px) {
+	.container-fluid-mid {
+		visibility: hidden;
+		display: none;
+	}
+	.container-fluid-values {
+		padding: 20px 50px 20px 50px;
+	}
+	.container-fluid-panel {
+		padding: 20px 50px 20px 50px;
+	}
+	.container-fluid-contact {
+		padding: 50px 50px 50px 50px;
+	}
+	.container-nav {
+		padding-right: 0px;
+	}
+	.nav-stacked {
+		visibility: hidden;
+		display: none;
+	}
+	.navbar-header {
+		padding-right: 0px;
+		width: 100%;
+		float: none;
+	}
+	.navbar-toggle {
+		margin-right: 0px;
+	}
+	.perfrev-content {
+		visibility: hidden;
+		display: none;
+	}
+	#carouselPerf {
+		visibility: show;
+		display: block;
+	}
+	.partlogo {
+		padding: 0px 0px 0px 0px;
+	}
+	.footerlarge {
+		visibility: hidden;
+		display: none;
+	}
+	.footersmall {
+		visibility: show;
+		display: block;
+	}
+	#top-image {
+		box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+	}
+	.container-prod .panelhead {
+		padding: 10px 50px 50px 50px;
+	}
+	.container-prod  .panelone {
+		padding: 100px 50px 50px 50px;
+	}
+}
+@media screen and (min-width: 900px) {
+	.container-fluid-values {
+		padding: 60px 100px;
+	}
+	.container-fluid-panel {
+		padding: 60px 100px;
+	}
+	.container-fluid-contact {
+		padding: 60px 100px;
+	}
+	#carouselPerf {
+		visibility: hidden;
+		display: none;
+	}
+	.partner {
+		padding: 0px 20px 0px 10px;
+	}
+	.footersmall {
+		visibility: hidden;
+		display: none;
+	}
+	.container-prod .panelhead {
+		padding: 100px 50px 50px 100px;
+	}
+}
+/*--------------------------------------------------------------
+8.4 MQ: 990px
+--------------------------------------------------------------*/
+@media (max-width: 990px) {
+    .navbar-header {
+        float: none;
+    }
+	.container-nav {
+		padding: 0px;
+	}
+    .navbar-toggle {
+        display: block;
+    }
+    .navbar-collapse {
+        border-top: 3px solid transparent;
+    }
+   	.navbar-collapse.collapse {
+        display: none!important;
+    }
+    .navbar-nav {
+        float: none!important;
+        margin-top: 7.5px;
+    }
+    .navbar-nav>li {
+        float: none;
+    }
+    .navbar-nav>li>a {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .collapse.in{
+        display:block !important;
+    }
+}
+/*--------------------------------------------------------------
+8.5 MQ: 1300px
+--------------------------------------------------------------*/
+@media screen and (max-width: 1300px) {
+    .container-nav {
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+}
+/*--------------------------------------------------------------
+9.0 Contact Page
+--------------------------------------------------------------*/
+.container-fluid-contact .glyphicon {
+	color: #02C4E8;
+}
+.google-maps {
+    position: relative;
+    padding-bottom: 70%; // This is the aspect ratio
+    height: 0;
+    overflow: hidden;
+}
+.google-maps iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+}
+/*--------------------------------------------------------------
+10.0 Why Us (About) Page
+--------------------------------------------------------------*/
+.container-fluid-values .glyphicon {
+	color: white;
+}
+.thumbnail {
+    padding: 0 0 0 0;
+    border: none;
+    border-radius: 0;
+}
+.panel {
+    border-radius:0 !important;
+	width: 100%;
+    transition: box-shadow 0.5s;
+	border:none;
+}
+#panel h3 {
+    font-size: 22px;
+	color: white;
+}
+#panelout {
+	position: relative;
+	width: 100%;
+	height: 450px;
+	overflow: hidden;
+}
+.panel-content {
+	padding: 50px 10px 30px 10px;
+	position: absolute;
+	top: 0%;
+	color: white;
+	text-shadow: 0 1px 2px rgba(0,0,0,.6);
+	background-color: rgba(0,0,0,.5);
+}
+.paneline {
+	border-top: 3px solid white;
+}
+.panelout {
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 450px;
+	overflow: hidden;
+}
+.panelout .panel {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background: rgba(0,0,0,.7);
+	padding: 10px 30px 10px 30px;
+	top: 70%;
+	-webkit-transition: top 0.7s; /* For Safari 3.1 to 6.0 */
+	transition: top 0.7s;
+	transition-timing-function: ease;
+}
+.panelout .panel:hover, .panelout .panel:active, .panelout .panel:focus{
+	top: 0%;
+}
+/*--------------------------------------------------------------
+11.0 Performance Revolution Page
+--------------------------------------------------------------*/
+.perf1 {
+	background-image: url("./includes/rev.jpg") !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.perf2 {
+	background-image: url("./includes/win.jpg") !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.perf3 {
+	background-image: url("./includes/key.jpg") !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.perf4 {
+	background-image: url("./includes/forward.jpg") !important;
+	background-repeat: no-repeat !important;
+	background-size: cover !important;
+}
+.perf {
+	transition: all .2s ease-in-out;
+	box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+}
+.perf:hover {
+	transform: scale(1.08);
+	box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+}
+#top-image:active {
+	transform: scale(1.03);
+	box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+}
+@media screen and (max-width: 900px) {
+	.perf {
+		box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+	}
+	.perf:hover {
+		transform: scale(1);
+		box-shadow: inset 0 0 0 1000px rgba(255,255,255,0);
+	}
+}
+/*--------------------------------------------------------------
+12.0 Product & Services Pages
+--------------------------------------------------------------*/
+.key {
+	padding-right:20px;
+	padding-top: 20px;
+	margin-bottom: 20px;
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.key p, .key span {
+	-moz-transition: all 0.2s;
+	-webkit-transition: all 0.2s;
+	transition: all 0.2s;
+}
+.key:hover {
+	border-left: 3px solid #02C4E8;
+}
+.key:hover p{
+	color: #02C4E8 !important;
+}
+.key:hover span{
+	color: white !important;
+}
+.container-prod .panelhead {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	margin: auto;
+	background: rgba(0,0,0,.7);
+}
+/*--------------------------------------------------------------
+13.0 Career Page
+--------------------------------------------------------------*/
+.careerlink {
+	font-size: 50px;
+}
+
+.careerlink a {
+	color: #02C4E8 !important;
+}
